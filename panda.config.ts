@@ -2,7 +2,7 @@ import { defineConfig } from "@pandacss/dev"
 
 export default defineConfig({
   // Whether to use css reset
-  preflight: true,
+  preflight: process.env.TARO_ENV === 'h5',
 
   // Where to look for your css declarations
   include: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -16,7 +16,5 @@ export default defineConfig({
   },
 
   // The output directory for your css system
-  outdir: "src/styled-system",
-
-
+  outdir: "styled-system",
 })

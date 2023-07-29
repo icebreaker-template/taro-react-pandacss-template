@@ -28,7 +28,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       }
     },
     alias: {
-      '@styled-system': path.resolve(__dirname, '..', 'src/styled-system')
+      'styled-system': path.resolve(__dirname, '..', 'styled-system')
     },
     framework: 'react',
     compiler: 'webpack5',
