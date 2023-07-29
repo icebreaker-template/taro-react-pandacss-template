@@ -1,3 +1,4 @@
+import path from 'path'
 import { defineConfig, type UserConfigExport } from '@tarojs/cli'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import devConfig from './dev'
@@ -25,6 +26,9 @@ export default defineConfig(async (merge, { command, mode }) => {
       ],
       options: {
       }
+    },
+    alias: {
+      '@styled-system': path.resolve(__dirname, '..', 'src/styled-system')
     },
     framework: 'react',
     compiler: 'webpack5',
