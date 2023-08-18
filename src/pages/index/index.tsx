@@ -1,3 +1,4 @@
+import { IceButton } from "@/components/IceButton";
 import { View, Text, Image } from "@tarojs/components";
 // import { useLoad } from "@tarojs/taro";
 import { css } from "styled-system/css";
@@ -26,6 +27,26 @@ export default function Index() {
       </View>
       <View className={styles}>
         <Text>Hello Pandaria's world!</Text>
+      </View>
+      <View
+        className={css({
+          display: "flex",
+          justifyContent: "space-between",
+        })}
+      >
+        <IceButton>IceButton default</IceButton>
+        <IceButton
+          size='lg'
+          visual='outline'
+          customClass={css({
+            // ! means !important
+            // you could write "2xl !important" instead
+            // https://panda-css.com/docs/concepts/writing-styles#important-styles
+            fontSize: "2xl!",
+          })}
+        >
+          IceButton custom
+        </IceButton>
       </View>
     </>
   );
