@@ -59,6 +59,16 @@ export default defineConfig(async (merge, { command, mode }) => {
       },
       webpackChain(chain) {
         chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin)
+        chain.merge({
+          module: {
+            rule: [
+              {
+                test: /\.[cm]js$/i,
+                loader: 'babel-loader'
+              }
+            ]
+          }
+        })
       },
     },
     h5: {
