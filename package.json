@@ -86,7 +86,7 @@
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "typescript": "^5.5.3",
     "weapp-ide-cli": "^1.0.1",
-    "weapp-pandacss": "^1.5.0",
+    "weapp-pandacss": "^1.5.1",
     "webpack": "5.92.1"
   }
 }
